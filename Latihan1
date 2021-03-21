@@ -1,0 +1,17 @@
+#!/bin/bash
+
+sum=0
+
+
+# cek jumlah statement dengan mod 2
+if [ $(($# % 2)) == 0  ]
+then 
+    echo "Anda belum beruntung, coba lagi."
+else
+#loop pada setiap statement
+    for n in $@
+    do
+    sum=$(($sum+$n))
+    done
+    echo $sum
+fi
